@@ -17,7 +17,7 @@ public class Matrizes {
         int matriz1[][] = new int[l1][c1];
         int matriz2[][] = new int[l2][c2];
 
-        if (l1 == c2) {
+        if (c1 == l2) {
             System.out.println("Essa multiplicação é possivel, preencha a matriz e terá o resultado");
             int matrizPreench1[][] = preencheMatriz(matriz1);
             int matrizPreench2[][] = preencheMatriz(matriz2);
@@ -32,6 +32,7 @@ public class Matrizes {
         int[][] resultado = new int[x.length][x[0].length];
         for (int i = 0; i < x.length; i++) {
             for (int e = 0; e < x[0].length; e++) {
+                System.out.println("Digite o elemento [" + i + "][" + e + "]:");
                 int num = sc.nextInt();
                 resultado[i][e] = num;
             }
@@ -42,15 +43,17 @@ public class Matrizes {
     public static void multiplicaMatriz(int[][] x, int[][] y) {
         int[][] resultado = new int[x.length][y[0].length];
         for (int i = 0; i < x.length; i++) {
-            for (int e = 0; e < y[0].length; e++) {
+            for (int j = 0; j < y[0].length; j++) {
                 for (int k = 0; k < x[0].length; k++) {
-                    resultado[i][e] += x[i][k] * y[k][e];
+                    resultado[i][j] += x[i][k] * y[k][j];
                 }
             }
         }
-        for (int[] row : resultado) {
-            for (int value : row) {
-                System.out.print(value + " ");
+
+        System.out.println("Resultado da multiplicação:");
+        for (int i = 0; i < resultado.length; i++) {
+            for (int j = 0; j < resultado[0].length; j++) {
+                System.out.print(resultado[i][j] + " ");
             }
             System.out.println();
         }
