@@ -1,0 +1,73 @@
+1. São a forma mais básica de dados em Java
+    byte: 8-bit, inteiro com sinal.
+    short: 16-bit, inteiro com sinal.
+    int: 32-bit, inteiro com sinal.
+    long: 64-bit, inteiro com sinal.
+    float: ponto flutuante de 32-bit.
+    double: ponto flutuante de 64-bit.
+    char: 16-bit, Unicode character.
+    boolean: true ou false.
+
+2. É o processo de converter explicitamente um tipo de dados em outro.
+    - Convertendo um tipo menor para um tipo maior.
+        int myInt = 9;
+        double myDouble = myInt; 
+
+    -  Convertendo um tipo maior para um tipo menor.
+        double myDouble = 9.78;
+        int myInt = (int) myDouble; 
+
+3. 
+    Resposta1 = 131030
+    Resposta2 = 53
+
+4.
+    Linha 4 = 1 vez
+    Linha 5 = 1 vez
+    Linha 7 = 3 vezes
+    Linha 8 = 2 vezes
+
+5.
+    a = 1, b = 2, c = 3 -> resposta += "Os valores informados não formam um triangulo."
+
+    a = 3, b = 2, c = 4 -> resposta += "Os lados informados formam um triangulo. É um triangulo escaleno."
+
+    a = 5, b = 3, c = 4 -> resposta += "Os lados informados formam um triângulo. É um triângulo escaleno. É um triângulo retângulo."
+
+    a = 3, b = 5, c = 3 -> resposta += "Os lados informados formam um triângulo. É um triângulo isósceles."
+
+    a = 5, b = 5, c = 5 -> resposta += "Os lados informados formam um triângulo. É um triângulo equilátero."
+
+
+6.
+    CÓDIGO
+
+7.
+    CÓDIGO
+
+8.
+    [ 9, 3, 6, 4, 5, 8, 0, 2, 7, 1 ]
+    [ 2, 7, 1, 9, 3, 6, 4, 5, 8, 0 ]
+
+9.
+    0: ñ-primo
+    1: ñ-primo
+    2: primo
+    3: primo
+    4: ñ-primo
+    5: primo
+    6: ñ-primo
+    7: primo
+    8: ñ-primo
+    9: ñ-primo
+    10: ñ-primo
+    11: primo
+    12: ñ-primo
+    13: primo
+    14: ñ-primo
+    15: ñ-primo
+    16: ñ-primo
+    17: primo
+    18: ñ-primo
+    19: primo
+    20: ñ-primo
