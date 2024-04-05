@@ -26,6 +26,7 @@ public class Matrizes {
         } else {
             System.out.println("Essa multiplicação é impossivel");
         }
+        sc.close();
     }
 
     public static int[][] preencheMatriz(int[][] x) {
