@@ -53,7 +53,7 @@ public class exercicio4 {
 
     public static boolean simetrico(int[][] MatrizArquivo) {
         for (int a = 0; a < MatrizArquivo.length; a++) {
-            for (int b = 0; b < MatrizArquivo[a].length; b++) {
+            for (int b = a + 1; b < MatrizArquivo[a].length; b++) {
                 if (MatrizArquivo[a][b] != MatrizArquivo[b][a]) {
                     return false;
                 }
