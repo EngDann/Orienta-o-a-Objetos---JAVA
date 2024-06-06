@@ -23,5 +23,4 @@ public class exercicio2 {
             System.out.println();
         }
     }
-
 }
