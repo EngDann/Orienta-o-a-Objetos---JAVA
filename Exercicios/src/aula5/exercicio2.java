@@ -1,4 +1,4 @@
-package revisao;
+package aula5;
 
 public class exercicio2 {
     public static void main(String[] args) {

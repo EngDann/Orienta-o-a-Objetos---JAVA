@@ -1,4 +1,4 @@
-package revisao;
+package aula5;
 
 import java.io.*;
 import java.util.*;
