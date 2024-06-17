@@ -1,11 +1,11 @@
 package aula6.Strings;
 
-public class Strings_Principal {
+public class stringsPrincipal {
     public static void main(String[] args) {
         // Declara uma variável do tipo Strings
-        Strings Palavra1;
+        strings Palavra1;
         // Inicializa a variável com um novo objeto Strings
-        Palavra1 = new Strings();
+        Palavra1 = new strings();
         // Define a string "ola" para o objeto Palavra1
         Palavra1.setString("ola");
 

@@ -1,16 +1,16 @@
 package aula6.Strings;
 
-public class Strings {
+public class strings {
     // Declaração de um atributo para armazenar a palavra
     String Palavra;
 
     // Construtor que inicializa a palavra com um valor fornecido
-    public Strings(String Palavra) {
+    public strings(String Palavra) {
         this.Palavra = Palavra;
     }
 
     // Construtor padrão
-    public Strings() {
+    public strings() {
     }
 
     // Método setter para definir o valor da palavra

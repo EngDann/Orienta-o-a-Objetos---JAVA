@@ -1,11 +1,13 @@
-package aula6.Calculadora;
+package aula7;
 
-public class Calculadora {
+public class calculadora5Operacoes {
+
     // Atributos da classe Calculadora
-    int op1, op2, resultado;
+    int op1, op2;
+    float resultado;
 
     // Construtor que inicializa os operadores com valores fornecidos
-    public Calculadora(int op1, int op2) {
+    public calculadora5Operacoes(int op1, int op2) {
         // 'this' refere-se ao atributo da instância da classe
         // 'op1' e 'op2' são os parâmetros passados ao construtor
         this.op1 = op1;
@@ -13,7 +15,7 @@ public class Calculadora {
     }
 
     // Construtor padrão sem parâmetros
-    public Calculadora() {
+    public calculadora5Operacoes() {
 
     };
 
@@ -28,7 +30,7 @@ public class Calculadora {
     }
 
     // Método getter para obter o valor de resultado
-    public int getResultado() {
+    public float getResultado() {
         return resultado; // Retorna o valor do atributo 'resultado'
     }
 
@@ -43,14 +45,29 @@ public class Calculadora {
     }
 
     // Método para somar op1 e op2 e armazenar o resultado
-    public int somar() {
+    public float somar() {
         resultado = op1 + op2; // Atribui a soma de op1 e op2 ao atributo 'resultado'
         return resultado; // Retorna o valor de 'resultado'
     }
 
     // Método para subtrair op2 de op1 e armazenar o resultado
-    public int subtrair() {
+    public float subtrair() {
         resultado = op1 - op2; // Atribui a subtração de op2 de op1 ao atributo 'resultado'
         return resultado; // Retorna o valor de 'resultado'
+    }
+
+    public float dividir() {
+        resultado = op1 / op2;
+        return resultado;
+    }
+
+    public float multiplicar() {
+        resultado = op1 * op2;
+        return resultado;
+    }
+
+    public float trocarSinal(int op) {
+        resultado = op * -1;
+        return resultado;
     }
 }
