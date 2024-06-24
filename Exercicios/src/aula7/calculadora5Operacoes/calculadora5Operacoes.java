@@ -1,4 +1,4 @@
-package aula7;
+package aula7.calculadora5Operacoes;
 
 public class calculadora5Operacoes {
 
