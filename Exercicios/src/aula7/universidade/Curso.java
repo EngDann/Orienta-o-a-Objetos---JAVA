@@ -7,6 +7,7 @@ public class Curso {
     private String nome, turno;
     private int cargaHoraria;
     private List<Aluno> alunos;
+    private List<Disciplina> disciplinas;
 
     public Curso() {
         this.alunos = new ArrayList<>();
@@ -60,9 +61,18 @@ public class Curso {
             aluno.setCurso(null); // Remove o vínculo do curso com o aluno
         }
     }
-    /*
-     * public void setCurso(Curso curso) {
-     * this.curso = curso;
-     * }
-     */
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void CriarDisciplinas(Disciplina disciplina) {
+        if (!disciplinas.contains(disciplina)) {
+            disciplinas.add(disciplina);
+        }
+    }
 }

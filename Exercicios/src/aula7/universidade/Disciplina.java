@@ -1,11 +1,15 @@
 package aula7.universidade;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Disciplina {
     private String nome, codigo, professor;
     private int cargaHoraria;
-    Curso cursos;
+    private List<Curso> cursos;
 
     public Disciplina() {
+        this.cursos = new ArrayList<>();
 
     }
 
@@ -46,6 +50,16 @@ public class Disciplina {
 
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
+    }
+
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void criarCurso(Curso curso) {
+        if (!cursos.contains(curso)) {
+            cursos.add(curso);
+        }
     }
 
 }
