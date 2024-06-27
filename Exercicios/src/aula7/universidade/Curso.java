@@ -60,4 +60,9 @@ public class Curso {
             aluno.setCurso(null); // Remove o vínculo do curso com o aluno
         }
     }
+    /*
+     * public void setCurso(Curso curso) {
+     * this.curso = curso;
+     * }
+     */
 }

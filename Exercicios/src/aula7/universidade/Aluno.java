@@ -1,9 +1,12 @@
 package aula7.universidade;
 
+import java.util.List;
+
 public class Aluno {
     private String nome, email;
     private int matricula;
     private Curso curso;
+    private List<Disciplina> disciplinas;
 
     public Aluno() {
     }
@@ -45,5 +48,15 @@ public class Aluno {
 
     public void setCurso(Curso curso) {
         this.curso = curso;
+    }
+
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void aplicarEmDisciplinas(Disciplina disciplina) {
+        if (!disciplinas.contains(disciplina)) {
+            disciplinas.add(disciplina);
+        }
     }
 }
