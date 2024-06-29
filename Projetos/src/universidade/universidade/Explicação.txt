@@ -1,0 +1,37 @@
+Classe Principal
+A classe Principal é a porta de entrada do programa. Ela contém o método main, que é responsável por criar e configurar os objetos das outras classes. O fluxo de execução do programa começa e termina aqui. Nessa classe, criamos instâncias das universidades, cursos, disciplinas e alunos. Adicionamos disciplinas aos cursos e cursos às universidades, além de associar alunos aos cursos e disciplinas aos alunos. Por fim, a classe Principal chama o método imprimirUniversidade para exibir as informações detalhadas das universidades, incluindo os cursos, disciplinas e alunos associados.
+
+Classe Universidade
+A classe Universidade representa uma universidade. Ela contém os atributos nome, codigo e uma lista de cursos (cursos). Os métodos desta classe permitem definir o nome e o código da universidade, bem como adicionar cursos a ela. A lista de cursos armazena todos os cursos oferecidos pela universidade.
+
+Atributos: nome, codigo, cursos.
+Métodos: getNome, setNome, getCodigo, setCodigo, getCurso, criarCurso.
+Classe Curso
+A classe Curso representa um curso dentro da universidade. Ela contém atributos como nome, turno, cargaHoraria, uma lista de alunos (alunos) e uma lista de disciplinas (disciplinas). Os métodos desta classe permitem definir e obter as informações do curso, adicionar alunos e disciplinas ao curso e remover alunos. A lista de alunos mantém o registro dos alunos matriculados no curso, enquanto a lista de disciplinas armazena as disciplinas que fazem parte do curso.
+
+Atributos: nome, turno, cargaHoraria, alunos, disciplinas.
+Métodos: getNome, setNome, getTurno, setTurno, getCargaHoraria, setCargaHoraria, getAlunos, addAluno, removeAluno, setAlunos, getDisciplinas, adicionarDisciplinas.
+Classe Disciplina
+A classe Disciplina representa uma disciplina oferecida em um curso. Ela contém atributos como nome, codigo, professor, cargaHoraria e uma lista de cursos (cursos). Os métodos desta classe permitem definir e obter as informações da disciplina, além de adicionar cursos aos quais a disciplina pertence. A lista de cursos é útil para saber em quais cursos a disciplina está sendo ensinada.
+
+Atributos: nome, codigo, professor, cargaHoraria, cursos.
+Métodos: getNome, setNome, getCodigo, setCodigo, getProfessor, setProfessor, getCargaHoraria, setCargaHoraria, getCursos, adicionarCurso.
+Classe Aluno
+A classe Aluno representa um aluno matriculado em um curso. Ela contém atributos como nome, email, matricula, um objeto do tipo Curso (curso) e uma lista de disciplinas (disciplinas). Os métodos desta classe permitem definir e obter as informações do aluno, além de aplicar o aluno em disciplinas de seu curso. A lista de disciplinas armazena as disciplinas nas quais o aluno está matriculado.
+
+Atributos: nome, email, matricula, curso, disciplinas.
+Métodos: getNome, setNome, getEmail, setEmail, getMatricula, setMatricula, getCurso, setCurso, getDisciplinas, aplicarEmDisciplinas.
+Conexões entre as Classes
+Universidade e Curso: A classe Universidade possui uma lista de objetos do tipo Curso. Cada universidade pode ter vários cursos. O método criarCurso na classe Universidade é usado para adicionar cursos à universidade.
+
+Curso e Disciplina: A classe Curso possui uma lista de objetos do tipo Disciplina. Cada curso pode ter várias disciplinas. O método adicionarDisciplinas na classe Curso é usado para adicionar disciplinas ao curso.
+
+Curso e Aluno: A classe Curso também possui uma lista de objetos do tipo Aluno. Cada curso pode ter vários alunos. O método addAluno na classe Curso é usado para adicionar alunos ao curso.
+
+Disciplina e Curso: A classe Disciplina possui uma lista de objetos do tipo Curso. Cada disciplina pode pertencer a vários cursos. O método adicionarCurso na classe Disciplina é usado para associar a disciplina a um curso.
+
+Aluno e Disciplina: A classe Aluno possui uma lista de objetos do tipo Disciplina. Cada aluno pode estar matriculado em várias disciplinas. O método aplicarEmDisciplinas na classe Aluno é usado para matricular o aluno em disciplinas de seu curso.
+
+Principal: A classe Principal orquestra a criação e conexão de todas essas entidades. Ela cria instâncias de universidades, cursos, disciplinas e alunos, configurando suas relações e, finalmente, imprimindo todas essas informações de forma estruturada.
+
+Essas classes juntas criam uma representação simplificada de uma universidade, onde universidades contêm cursos, cursos contêm disciplinas e alunos, e disciplinas estão associadas a cursos. A classe Principal coordena a criação dessas entidades e suas conexões, permitindo uma visão estruturada e interconectada do sistema universitário.
