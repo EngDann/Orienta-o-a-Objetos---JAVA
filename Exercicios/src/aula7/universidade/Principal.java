@@ -40,6 +40,7 @@ public class Principal {
         Software.adicionarDisciplinas(OO);
         Software.adicionarDisciplinas(PEAE);
         Aeroespacial.adicionarDisciplinas(EA);
+        Aeroespacial.adicionarDisciplinas(PEAE);
         Automotiva.adicionarDisciplinas(MCSOL);
         Automotiva.adicionarDisciplinas(PEAE);
 
@@ -51,6 +52,7 @@ public class Principal {
         MCSOL.adicionarCurso(Automotiva);
         PEAE.adicionarCurso(Automotiva);
         PEAE.adicionarCurso(Software);
+        PEAE.adicionarCurso(Aeroespacial);
 
         // Criar alunos
         Aluno aluno1 = new Aluno("Danilo", "danilo@gmail.com", 232014244, Software);
@@ -61,6 +63,7 @@ public class Principal {
         Software.addAluno(aluno1);
         Aeroespacial.addAluno(aluno2);
         Automotiva.addAluno(aluno3);
+        Automotiva.removeAluno(aluno3);
 
         // Aplicar disciplinas aos alunos
         aluno1.aplicarEmDisciplinas(OO, Software);

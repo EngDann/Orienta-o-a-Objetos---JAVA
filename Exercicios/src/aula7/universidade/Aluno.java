@@ -58,12 +58,17 @@ public class Aluno {
     }
 
     public void aplicarEmDisciplinas(Disciplina disciplina, Curso curso) {
-        if (this.curso.getDisciplinas().contains(disciplina)) {
-            if (!disciplinas.contains(disciplina)) {
-                disciplinas.add(disciplina);
+        if (this.getCurso() != null) {
+            if (this.curso.getDisciplinas().contains(disciplina)) {
+                if (!disciplinas.contains(disciplina)) {
+                    disciplinas.add(disciplina);
+                }
+            } else {
+                System.out.println(getNome() + ", " + disciplina.getNome() + " não existe no seu curso");
             }
         } else {
-            System.out.println(getNome() + ", " + disciplina.getNome() + " não existe no seu curso");
+            System.out.println(this.getNome() + ", você não está matriculado em nenhum curso");
         }
+
     }
 }
