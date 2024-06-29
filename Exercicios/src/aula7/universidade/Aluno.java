@@ -1,5 +1,6 @@
 package aula7.universidade;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Aluno {
@@ -9,6 +10,7 @@ public class Aluno {
     private List<Disciplina> disciplinas;
 
     public Aluno() {
+        this.disciplinas = new ArrayList<>();
     }
 
     public Aluno(String nome, String email, int matricula, Curso curso) {
@@ -16,6 +18,7 @@ public class Aluno {
         this.email = email;
         this.matricula = matricula;
         this.curso = curso;
+        this.disciplinas = new ArrayList<>();
     }
 
     public String getNome() {
@@ -54,9 +57,13 @@ public class Aluno {
         return disciplinas;
     }
 
-    public void aplicarEmDisciplinas(Disciplina disciplina) {
-        if (!disciplinas.contains(disciplina)) {
-            disciplinas.add(disciplina);
+    public void aplicarEmDisciplinas(Disciplina disciplina, Curso curso) {
+        if (this.curso.getDisciplinas().contains(disciplina)) {
+            if (!disciplinas.contains(disciplina)) {
+                disciplinas.add(disciplina);
+            }
+        } else {
+            System.out.println(getNome() + ", " + disciplina.getNome() + " não existe no seu curso");
         }
     }
 }

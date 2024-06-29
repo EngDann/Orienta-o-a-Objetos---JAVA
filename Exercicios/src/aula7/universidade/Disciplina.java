@@ -18,6 +18,7 @@ public class Disciplina {
         this.codigo = codigo;
         this.professor = professor;
         this.cargaHoraria = cargaHoraria;
+        this.cursos = new ArrayList<>();
     }
 
     public String getNome() {
@@ -56,7 +57,7 @@ public class Disciplina {
         return cursos;
     }
 
-    public void criarCurso(Curso curso) {
+    public void adicionarCurso(Curso curso) {
         if (!cursos.contains(curso)) {
             cursos.add(curso);
         }

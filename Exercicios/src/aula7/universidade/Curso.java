@@ -11,6 +11,7 @@ public class Curso {
 
     public Curso() {
         this.alunos = new ArrayList<>();
+        this.disciplinas = new ArrayList<>(); // Inicializando a lista de disciplinas
     }
 
     public Curso(String nome, String turno, int cargaHoraria) {
@@ -18,6 +19,7 @@ public class Curso {
         this.turno = turno;
         this.cargaHoraria = cargaHoraria;
         this.alunos = new ArrayList<>();
+        this.disciplinas = new ArrayList<>(); // Inicializando a lista de disciplinas
     }
 
     public String getNome() {
@@ -70,7 +72,7 @@ public class Curso {
         return disciplinas;
     }
 
-    public void CriarDisciplinas(Disciplina disciplina) {
+    public void adicionarDisciplinas(Disciplina disciplina) {
         if (!disciplinas.contains(disciplina)) {
             disciplinas.add(disciplina);
         }
