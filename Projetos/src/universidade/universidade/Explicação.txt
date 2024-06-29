@@ -35,3 +35,10 @@ Aluno e Disciplina: A classe Aluno possui uma lista de objetos do tipo Disciplin
 Principal: A classe Principal orquestra a criação e conexão de todas essas entidades. Ela cria instâncias de universidades, cursos, disciplinas e alunos, configurando suas relações e, finalmente, imprimindo todas essas informações de forma estruturada.
 
 Essas classes juntas criam uma representação simplificada de uma universidade, onde universidades contêm cursos, cursos contêm disciplinas e alunos, e disciplinas estão associadas a cursos. A classe Principal coordena a criação dessas entidades e suas conexões, permitindo uma visão estruturada e interconectada do sistema universitário.
+
+**POSSIVEIS MELHORIAS**
+-MÉTODOS DE PESQUISA DE ALUNOS EM UNIVERSIDADE, CURSO E DISCIPLINA
+-MÉTODO PARA GERAR UM RELATÓRIO DE CADA ALUNO
+-RETIRAR CURSO DE UNIVERSIDADE E DISCIPLINA DE CURSO
+-CRIAR LÓGICA DE ESTADOS BRASILEIROS, ONDE CADA UM PODE TER VARIAS UNIVERISDADES
+-TORNAR O PROGRAMA PRINCIPAL MAIS INTERATIVO, DANDO DUAS OPÇÕES, AUTOMÁTICO E MANUAL, NO AUTOMÁTICO SÓ IMPRIME AS INFORMAÇÕES E NO MANUAL ELE TEM QUE INSERIR TUDO (USAR EXERCICIO 4, LISTA9 COMO PARÂMETRO)
