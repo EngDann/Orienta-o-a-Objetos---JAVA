@@ -1,38 +1,19 @@
 package aula9.calculadoraAreaPerimetro;
 
-public class Trapezio {
+public class Trapezio extends Figura {
     private int baseMaior;
     private int baseMenor;
-    private double area;
-    private double perimetro;
     private double altura;
 
-    public Trapezio(double area, double perimetro, int baseMaior, int baseMenor, int altura) {
-        this.area = area;
-        this.perimetro = perimetro;
+    public Trapezio() {
+        super();
+    }
+
+    public Trapezio(int baseMaior, int baseMenor, double altura) {
+        super();
         this.baseMaior = baseMaior;
         this.baseMenor = baseMenor;
         this.altura = altura;
-    }
-
-    public Trapezio() {
-
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(int area) {
-        this.area = area;
-    }
-
-    public double getPerimetro() {
-        return perimetro;
-    }
-
-    public void setPerimetro(int perimetro) {
-        this.perimetro = perimetro;
     }
 
     public int getBaseMaior() {
@@ -59,11 +40,13 @@ public class Trapezio {
         this.altura = altura;
     }
 
+    @Override
     public void Calculo() {
         area = ((this.baseMaior + this.baseMenor) * this.altura) / 2;
         perimetro = 2 * this.altura + this.baseMaior + this.baseMenor;
     }
 
+    @Override
     public void resultado() {
         System.out.println("Trapezio: \nArea:" + this.getArea() + "\n" + "Perimetro:" + this.getPerimetro() + "\n");
     }

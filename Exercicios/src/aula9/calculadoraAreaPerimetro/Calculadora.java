@@ -5,13 +5,7 @@ import java.util.Scanner;
 public class Calculadora {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int altura, baseMaior, baseMenor, raio, base, lado;
-        int[] lados = new int[3];
-        Quadrado QUADRADO = new Quadrado();
-        Retangulo RETANGULO = new Retangulo();
-        Triangulo TRIANGULO = new Triangulo();
-        Circulo CIRCULO = new Circulo();
-        Trapezio TRAPEZIO = new Trapezio();
+        Figura[] figuras = new Figura[5];
         int[] operacoes = new int[5];
         String continua = "S";
 
@@ -24,9 +18,11 @@ public class Calculadora {
                 case 1:
                     if (operacoes[0] != 1) {
                         System.out.println("Informe a medida do lado do quadrado: ");
-                        lado = sc.nextInt();
-                        QUADRADO.setLado(lado);
-                        QUADRADO.Calculo();
+                        int lado = sc.nextInt();
+                        Quadrado quadrado = new Quadrado();
+                        quadrado.setLado(lado);
+                        quadrado.Calculo();
+                        figuras[0] = quadrado;
                         operacoes[0] = 1;
                     } else {
                         System.out.println("Já existe um quadrado cadastrado");
@@ -35,12 +31,14 @@ public class Calculadora {
                 case 2:
                     if (operacoes[1] != 1) {
                         System.out.println("Informe a base do retângulo: ");
-                        base = sc.nextInt();
+                        int base = sc.nextInt();
                         System.out.println("Informe a altura do retângulo: ");
-                        altura = sc.nextInt();
-                        RETANGULO.setBase(base);
-                        RETANGULO.setAltura(altura);
-                        RETANGULO.Calculo();
+                        int altura = sc.nextInt();
+                        Retangulo retangulo = new Retangulo();
+                        retangulo.setBase(base);
+                        retangulo.setAltura(altura);
+                        retangulo.Calculo();
+                        figuras[1] = retangulo;
                         operacoes[1] = 1;
                     } else {
                         System.out.println("Já existe um retângulo cadastrado");
@@ -49,19 +47,21 @@ public class Calculadora {
                 case 3:
                     if (operacoes[2] != 1) {
                         System.out.println("Informe a base do triângulo: ");
-                        base = sc.nextInt();
+                        int base = sc.nextInt();
                         System.out.println("Informe a altura do triângulo: ");
-                        altura = sc.nextInt();
+                        int altura = sc.nextInt();
                         System.out.println("Informe o primeiro lado do triângulo: ");
-                        lados[0] = sc.nextInt();
+                        int lado1 = sc.nextInt();
                         System.out.println("Informe o segundo lado do triângulo: ");
-                        lados[1] = sc.nextInt();
+                        int lado2 = sc.nextInt();
                         System.out.println("Informe o terceiro lado do triângulo: ");
-                        lados[2] = sc.nextInt();
-                        TRIANGULO.setBase(base);
-                        TRIANGULO.setAltura(altura);
-                        TRIANGULO.setLado(lados);
-                        TRIANGULO.Calculo();
+                        int lado3 = sc.nextInt();
+                        Triangulo triangulo = new Triangulo();
+                        triangulo.setBase(base);
+                        triangulo.setAltura(altura);
+                        triangulo.setLado(new int[] { lado1, lado2, lado3 });
+                        triangulo.Calculo();
+                        figuras[2] = triangulo;
                         operacoes[2] = 1;
                     } else {
                         System.out.println("Já existe um triângulo cadastrado");
@@ -70,9 +70,11 @@ public class Calculadora {
                 case 4:
                     if (operacoes[3] != 1) {
                         System.out.println("Informe o raio do círculo: ");
-                        raio = sc.nextInt();
-                        CIRCULO.setRaio(raio);
-                        CIRCULO.Calculo();
+                        int raio = sc.nextInt();
+                        Circulo circulo = new Circulo();
+                        circulo.setRaio(raio);
+                        circulo.Calculo();
+                        figuras[3] = circulo;
                         operacoes[3] = 1;
                     } else {
                         System.out.println("Já existe um círculo cadastrado");
@@ -81,15 +83,17 @@ public class Calculadora {
                 case 5:
                     if (operacoes[4] != 1) {
                         System.out.println("Informe a base maior do trapézio: ");
-                        baseMaior = sc.nextInt();
+                        int baseMaior = sc.nextInt();
                         System.out.println("Informe a base menor do trapézio: ");
-                        baseMenor = sc.nextInt();
+                        int baseMenor = sc.nextInt();
                         System.out.println("Informe a altura do trapézio: ");
-                        altura = sc.nextInt();
-                        TRAPEZIO.setBaseMaior(baseMaior);
-                        TRAPEZIO.setBaseMenor(baseMenor);
-                        TRAPEZIO.setAltura(altura);
-                        TRAPEZIO.Calculo();
+                        int altura = sc.nextInt();
+                        Trapezio trapezio = new Trapezio();
+                        trapezio.setBaseMaior(baseMaior);
+                        trapezio.setBaseMenor(baseMenor);
+                        trapezio.setAltura(altura);
+                        trapezio.Calculo();
+                        figuras[4] = trapezio;
                         operacoes[4] = 1;
                     } else {
                         System.out.println("Já existe um trapézio cadastrado");
@@ -105,26 +109,7 @@ public class Calculadora {
 
         for (int num = 0; num < operacoes.length; num++) {
             if (operacoes[num] == 1) {
-                switch (num) {
-                    case 0:
-                        QUADRADO.resultado();
-
-                        break;
-                    case 1:
-                        RETANGULO.resultado();
-                        break;
-                    case 2:
-                        TRIANGULO.resultado();
-                        break;
-                    case 3:
-                        CIRCULO.resultado();
-                        break;
-                    case 4:
-                        TRAPEZIO.resultado();
-                        break;
-                    default:
-                        break;
-                }
+                figuras[num].resultado();
             }
         }
         sc.close();

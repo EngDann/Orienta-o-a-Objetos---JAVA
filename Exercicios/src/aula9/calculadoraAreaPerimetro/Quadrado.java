@@ -1,32 +1,15 @@
 package aula9.calculadoraAreaPerimetro;
 
-public class Quadrado {
-    private int area;
-    private int perimetro;
+public class Quadrado extends Figura {
     private int lado;
 
     public Quadrado() {
-
+        super();
     }
 
     public Quadrado(int lado) {
+        super();
         this.lado = lado;
-    }
-
-    public int getArea() {
-        return area;
-    }
-
-    public void setArea(int area) {
-        this.area = area;
-    }
-
-    public int getPerimetro() {
-        return perimetro;
-    }
-
-    public void setPerimetro(int perimetro) {
-        this.perimetro = perimetro;
     }
 
     public int getLado() {
@@ -37,11 +20,13 @@ public class Quadrado {
         this.lado = lado;
     }
 
+    @Override
     public void Calculo() {
         area = this.lado * this.lado;
         perimetro = 4 * this.lado;
     }
 
+    @Override
     public void resultado() {
         System.out.println("Quadrado: \nArea:" + this.getArea() + "\n" + "Perimetro:" + this.getPerimetro() + "\n");
     }
