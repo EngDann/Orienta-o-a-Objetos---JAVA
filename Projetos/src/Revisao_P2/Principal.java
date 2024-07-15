@@ -1,15 +1,18 @@
 import javax.swing.JOptionPane;
 
 import cadastros.CadastroAluno;
+import cadastros.CadastroProfessor;
 import view.MenuAluno;
 import view.MenuPrincipal;
 
 public class Principal {
 
 	static CadastroAluno cadAluno;
+	static CadastroProfessor cadProf;
 
 	public static void main(String[] args) {
 		cadAluno = new CadastroAluno();
+		cadProf = new CadastroProfessor();
 
 		int opcao = 0;
 
