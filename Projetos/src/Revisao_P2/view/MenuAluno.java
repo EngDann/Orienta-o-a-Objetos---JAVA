@@ -1,9 +1,8 @@
 package view;
 
 import javax.swing.JOptionPane;
-
 import app.Aluno;
-import cadastros.CadastroAluno;
+import cadastros.CRUD;
 
 public class MenuAluno {
 
@@ -33,10 +32,10 @@ public class MenuAluno {
 	}
 
 	private static String lerMatricula() {
-		return JOptionPane.showInputDialog("Informe a matricula do aluno: ");
+		return JOptionPane.showInputDialog("Informe a matrícula do aluno: ");
 	}
 
-	public static void menuAluno(CadastroAluno cadAluno) {
+	public static void menuAluno(CRUD<Aluno> Aluno) {
 		String txt = "Informe a opção desejada \n"
 				+ "1 - Cadastrar aluno\n"
 				+ "2 - Pesquisar aluno\n"
@@ -50,12 +49,12 @@ public class MenuAluno {
 			switch (opcao) {
 				case 1:
 					Aluno novoAluno = dadosNovoAluno();
-					cadAluno.cadastrarAluno(novoAluno);
+					Aluno.adicionar(novoAluno.getMatricula(), novoAluno);
 					break;
 
 				case 2:
 					String matricula = lerMatricula();
-					Aluno a = cadAluno.pesquisarAluno(matricula);
+					Aluno a = Aluno.pesquisar(matricula);
 					if (a != null)
 						JOptionPane.showMessageDialog(null, a.toString());
 					break;
@@ -63,7 +62,7 @@ public class MenuAluno {
 				case 3:
 					matricula = lerMatricula();
 					Aluno novoCadastro = dadosNovoAluno();
-					boolean atualizado = cadAluno.atualizarAluno(matricula, novoCadastro);
+					boolean atualizado = Aluno.atualizar(matricula, novoCadastro);
 					if (atualizado) {
 						JOptionPane.showMessageDialog(null, "Cadastro atualizado.");
 					}
@@ -71,18 +70,15 @@ public class MenuAluno {
 
 				case 4:
 					matricula = lerMatricula();
-					Aluno remover = cadAluno.pesquisarAluno(matricula);
-					boolean removido = cadAluno.removerAluno(remover);
+					boolean removido = Aluno.remover(matricula);
 					if (removido) {
 						JOptionPane.showMessageDialog(null, "Aluno removido do cadastro");
-						System.gc();
 					}
+					break;
 
 				default:
 					break;
 			}
 		} while (opcao != 0);
-		return;
 	}
-
 }

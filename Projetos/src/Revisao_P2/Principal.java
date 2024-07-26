@@ -1,18 +1,20 @@
 import javax.swing.JOptionPane;
 
-import cadastros.CadastroAluno;
-import cadastros.CadastroProfessor;
+import app.Aluno;
+import app.Professor;
 import view.MenuAluno;
 import view.MenuPrincipal;
 
+import cadastros.CRUD;
+
 public class Principal {
 
-	static CadastroAluno cadAluno;
-	static CadastroProfessor cadProf;
+	static CRUD<Aluno> Aluno;
+	static CRUD<Professor> Prof;
 
 	public static void main(String[] args) {
-		cadAluno = new CadastroAluno();
-		cadProf = new CadastroProfessor();
+		Aluno = new CRUD<>();
+		Prof = new CRUD<>();
 
 		int opcao = 0;
 
@@ -20,7 +22,7 @@ public class Principal {
 			opcao = MenuPrincipal.menuOpcoes();
 			switch (opcao) {
 				case 1:
-					MenuAluno.menuAluno(cadAluno);
+					MenuAluno.menuAluno(Aluno);
 					break;
 				case 2:
 					JOptionPane.showMessageDialog(null, "Cadastro de professores a ser implementado");
@@ -34,12 +36,10 @@ public class Principal {
 				case 0:
 					break;
 				default:
-					JOptionPane.showMessageDialog(null, "Opcao invalida");
+					JOptionPane.showMessageDialog(null, "Opção inválida");
 					opcao = -1;
 					break;
 			}
 		} while (opcao != 0);
-		return;
 	}
-
 }
