@@ -4,7 +4,7 @@ import app.Aluno;
 import app.Professor;
 import view.MenuAluno;
 import view.MenuPrincipal;
-
+import view.MenuProfessor;
 import cadastros.CRUD;
 
 public class Principal {
@@ -25,7 +25,7 @@ public class Principal {
 					MenuAluno.menuAluno(Aluno);
 					break;
 				case 2:
-					JOptionPane.showMessageDialog(null, "Cadastro de professores a ser implementado");
+					MenuProfessor.menuProfessor(Prof);
 					break;
 				case 3:
 					JOptionPane.showMessageDialog(null, "Cadastro de disciplinas a ser implementado");

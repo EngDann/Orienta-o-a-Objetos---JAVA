@@ -6,7 +6,7 @@ import cadastros.CRUD;
 
 public class MenuAluno {
 
-	public static Aluno dadosNovoAluno() {
+	public static Aluno dadosAlunos() {
 		String nome = lerNome();
 		String cpf = lerCPF();
 		String email = lerEmail();
@@ -35,12 +35,13 @@ public class MenuAluno {
 		return JOptionPane.showInputDialog("Informe a matrícula do aluno: ");
 	}
 
-	public static void menuAluno(CRUD<Aluno> Aluno) {
+	public static void menuAluno(CRUD<Aluno> Alunos) {
 		String txt = "Informe a opção desejada \n"
 				+ "1 - Cadastrar aluno\n"
 				+ "2 - Pesquisar aluno\n"
 				+ "3 - Atualizar aluno\n"
 				+ "4 - Remover aluno\n"
+				+ "5 - Listar todos os alunos\n"
 				+ "0 - Voltar para menu anterior";
 		int opcao = -1;
 		do {
@@ -48,21 +49,21 @@ public class MenuAluno {
 			opcao = Integer.parseInt(strOpcao);
 			switch (opcao) {
 				case 1:
-					Aluno novoAluno = dadosNovoAluno();
-					Aluno.adicionar(novoAluno.getMatricula(), novoAluno);
+					Aluno novoAluno = dadosAlunos();
+					Alunos.adicionar(novoAluno.getMatricula(), novoAluno);
 					break;
 
 				case 2:
 					String matricula = lerMatricula();
-					Aluno a = Aluno.pesquisar(matricula);
+					Aluno a = Alunos.pesquisar(matricula);
 					if (a != null)
 						JOptionPane.showMessageDialog(null, a.toString());
 					break;
 
 				case 3:
 					matricula = lerMatricula();
-					Aluno novoCadastro = dadosNovoAluno();
-					boolean atualizado = Aluno.atualizar(matricula, novoCadastro);
+					Aluno novoCadastro = dadosAlunos();
+					boolean atualizado = Alunos.atualizar(matricula, novoCadastro);
 					if (atualizado) {
 						JOptionPane.showMessageDialog(null, "Cadastro atualizado.");
 					}
@@ -70,12 +71,13 @@ public class MenuAluno {
 
 				case 4:
 					matricula = lerMatricula();
-					boolean removido = Aluno.remover(matricula);
+					boolean removido = Alunos.remover(matricula);
 					if (removido) {
 						JOptionPane.showMessageDialog(null, "Aluno removido do cadastro");
 					}
 					break;
-
+				case 5:
+					Alunos.listarTODOS();
 				default:
 					break;
 			}
