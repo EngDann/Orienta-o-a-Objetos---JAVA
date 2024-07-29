@@ -1,70 +1,70 @@
 # Termos
 
 a) **Classe**:
-Definição: Uma classe é uma descrição que abstrai um conjunto de objetos com características similares, que compartilham atributos e métodos. É o molde para criar objetos.
+Uma classe é uma descrição que abstrai um conjunto de objetos com características similares, que compartilham atributos e métodos. É o molde para criar objetos.
 
 b) **Objeto**:
-Definição: Um objeto é uma instância de uma classe. Ele possui estado (dados) e comportamento (métodos).
+Um objeto é uma instância de uma classe. Ele possui estado (dados) e comportamento (métodos).
 
 c) **Elementos de classe**:
-Definição: São os componentes de uma classe, incluindo atributos (variáveis de classe) e métodos (funções de classe).
+São os componentes de uma classe, incluindo atributos (variáveis de classe) e métodos (funções de classe).
 
 d) **Métodos construtores**:
-Definição: São métodos especiais usados para inicializar objetos de uma classe. Eles são chamados automaticamente quando um objeto é criado.
+São métodos especiais usados para inicializar objetos de uma classe. Eles são chamados automaticamente quando um objeto é criado.
 
 e) **Métodos destrutores**:
-Definição: São métodos especiais usados para liberar recursos antes de um objeto ser destruído. Em algumas linguagens, são chamados automaticamente quando o objeto é destruído.
+São métodos especiais usados para liberar recursos antes de um objeto ser destruído. Em algumas linguagens, são chamados automaticamente quando o objeto é destruído.
 
 f) **Estado**:
-Definição: Refere-se aos valores atuais dos atributos de um objeto. O estado de um objeto pode mudar ao longo do tempo.
+Refere-se aos valores atuais dos atributos de um objeto. O estado de um objeto pode mudar ao longo do tempo.
 
 g) **Retenção de estado**:
-Definição: A capacidade de um objeto de manter seu estado atual ao longo do tempo, mesmo após a execução de métodos.
+A capacidade de um objeto de manter seu estado atual ao longo do tempo, mesmo após a execução de métodos.
 
 h) **Associação entre objetos**:
-Definição: É um relacionamento entre dois ou mais objetos que permite a comunicação entre eles.
+É um relacionamento entre dois ou mais objetos que permite a comunicação entre eles.
 
 i) **Pacotes**:
-Definição: São agrupamentos de classes e outros pacotes, usados para organizar o código e gerenciar a visibilidade entre os componentes.
+São agrupamentos de classes e outros pacotes, usados para organizar o código e gerenciar a visibilidade entre os componentes.
 
 j) **Modificadores de acesso**:
-Definição: Especificam a visibilidade dos atributos e métodos de uma classe (público, privado, protegido).
+Especificam a visibilidade dos atributos e métodos de uma classe (público, privado, protegido).
 
 k) **Ocultação de informação**:
-Definição: Princípio de esconder detalhes internos dos objetos e expor apenas o necessário, promovendo a encapsulação.
+Princípio de esconder detalhes internos dos objetos e expor apenas o necessário, promovendo a encapsulação.
 
 l) **Escopo de elementos**:
-Definição: Refere-se à área do código onde um elemento (variável, método) é válido e pode ser acessado.
+Refere-se à área do código onde um elemento (variável, método) é válido e pode ser acessado.
 
 m) **Modificadores de escopo**:
-Definição: Determinam o alcance dos elementos dentro do código, como global, local, ou de instância.
+Determinam o alcance dos elementos dentro do código, como global, local, ou de instância.
 
 n) **Herança**:
-Definição: Mecanismo pelo qual uma classe (subclasse) herda atributos e métodos de outra classe (superclasse).
+Mecanismo pelo qual uma classe (subclasse) herda atributos e métodos de outra classe (superclasse).
 
 o) **Generalização**:
-Definição: Processo de criar uma classe genérica a partir de classes mais específicas, abstraindo características comuns.
+Processo de criar uma classe genérica a partir de classes mais específicas, abstraindo características comuns.
 
 p) **Especialização**:
-Definição: Processo de criar uma classe específica a partir de uma classe genérica, adicionando ou modificando características.
+Processo de criar uma classe específica a partir de uma classe genérica, adicionando ou modificando características.
 
 q) **Polimorfismo**:
-Definição: Capacidade de um método ou função de se comportar de diferentes maneiras com base no objeto que está operando.
+Capacidade de um método ou função de se comportar de diferentes maneiras com base no objeto que está operando.
 
 r) **Sobrescrita de métodos**:
-Definição: Quando uma subclasse fornece uma implementação específica de um método que já existe na sua superclasse.
+Quando uma subclasse fornece uma implementação específica de um método que já existe na sua superclasse.
 
 s) **Sobrecarga de métodos**:
-Definição: Quando múltiplos métodos com o mesmo nome são definidos em uma classe, mas com diferentes parâmetros.
+Quando múltiplos métodos com o mesmo nome são definidos em uma classe, mas com diferentes parâmetros.
 
 t) **Polimorfismo por coerção**:
-Definição: Capacidade de um método ou função de tratar diferentes tipos de dados de forma uniforme.
+Capacidade de um método ou função de tratar diferentes tipos de dados de forma uniforme.
 
 u) **Polimorfismo por inclusão**:
-Definição: Capacidade de objetos de diferentes classes serem tratados como objetos de uma classe comum, geralmente através de herança.
+Capacidade de objetos de diferentes classes serem tratados como objetos de uma classe comum, geralmente através de herança.
 
 v) **Polimorfismo paramétrico**:
-Definição: Capacidade de um único método ou classe operar em diferentes tipos de dados, usando parâmetros genéricos.
+Capacidade de um único método ou classe operar em diferentes tipos de dados, usando parâmetros genéricos.
 
 2. **Modificadores de acesso e seus níveis de visibilidade**:
 
@@ -95,7 +95,7 @@ Definição: Capacidade de um único método ou classe operar em diferentes tipo
    A referência do tipo A terá acesso a 2 atributos e 3 métodos. Mesmo que o objeto seja do tipo B e possua mais atributos e métodos, a referência de tipo A só pode acessar o que está definido na classe A.
 
 10. **Considerando um conjunto de classes hierarquicamente dispostas, qual é a vantagem de se utilizar uma referência da superclasse mais alta nessa hierarquia?**
-    Usar uma referência da superclasse mais alta proporciona maior flexibilidade e reutilização do código. Permite tratar diferentes objetos de subclasses de maneira uniforme, facilitando a implementação de algoritmos genéricos e permitindo a adição de novas subclasses sem modificar o código existente.Claro, aqui estão as respostas refinadas para maior precisão e clareza:
+    Usar uma referência da superclasse mais alta proporciona maior flexibilidade e reutilização do código. Permite tratar diferentes objetos de subclasses de maneira uniforme, facilitando a implementação de algoritmos genéricos e permitindo a adição de novas subclasses sem modificar o código existente.
 
 # UML
 
